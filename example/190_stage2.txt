@@ -1,0 +1,45 @@
+Based on the information provided and the images, I will calculate the DAPR score.
+
+**Stress Score Calculation:**
+
+*S1 - No rain:* Since rain is present in the sketch, the score is 0.
+*S2 - Rain Present:* Rain is present, so the score is 1.
+*S3 - Excess rain:* Without knowing the exact spatial dimensions, I can't calculate the space occupied by rain compared to the person, but there appears to be substantial rain. Therefore, I will estimate and score this as 0 assuming that it does not indicate "excess" rain.
+*S4 - Style of Rain:* Rain is depicted as lines, so the score is 1.
+*S6 - Rain touching:* The rain is touching the person, so the score is 1.
+*S8 - Wind:* No visible indication of wind direction is affecting the rain in the sketch, so the score is 0.
+*S9 - Puddles:* There is one puddle present, so the score is 1.
+*S10 - Standing in puddle:* The person is not standing in the puddle, so the score is 0.
+*S11 - Various rain styles:* The rain comprises lines and not just dots, so the score is 1 (one additional form - lines).
+*S13 - Lightning bolts:* There is no lightning, so the score is 0.
+*S14 - Lightning hits:* There is no lightning, so the score is 0.
+*S15 - Clouds:* There are three clouds present, so the score is 3.
+*S16 - Dark clouds:* It's not possible to determine darkness from the sketch, it is neutral, so the score is 0.
+
+*Stress score: S1+S2+S3+S4+S6+S8+S9+S10+S11+S13+S14+S15+S16 = 0+1+0+1+1+0+1+0+1+0+0+3+0 = 8*
+
+**Resource Score Calculation:**
+
+*R1 - Protection present:* No protective measures are observed as the umbrella is not being used, the score is 0.
+*R2 - Umbrella present:* The umbrella is present but not being used, the score is 1.
+*R3 - Umbrella held:* The umbrella is not being held, the score is 0.
+*R5 - Adequate size of protection:* The umbrella appears to be of adequate size, but given that it's not being used, this criteria is not applicable. Presuming adequate size while disregarded, I'll score this as 0.
+*R6 - Clear protection:* The umbrella seems intact, but it's on the ground, so I'll score this as 1.
+*R11 - Whole face:* The full face of the person is visible, so the score is 1.
+*R12 - Smile on Face:* The person seems to have a smile on their face, so the score is 1.
+*R13 - Centered figure:* The person is centered in the sketch, so the score is 1.
+*R14 - Size of figure:* There is no way to measure the size of the figure, so this will be scored as 0 due to lack of information.
+*R15 - Whole figure:* The whole figure is depicted from head to toe, facing forward, so the score is 1.
+(Note: R4, R7-R10, R16-R18 are not mentioned in the instructions, so they are not included in the Resource score.)
+
+*Resource score: R1+R2+R3+R5+R6+R11+R12+R13+R14+R15 = 0+1+0+0+1+1+1+1+0+1 = 6*
+
+**DAPR Score Calculation:**
+Subtract the total Stress Score from the total Resource Score.
+
+*Total score: Resource score - Stress score = 6 - 8 = -2*
+
+**Output:**
+- Stress score: 8
+- Resource score: 6
+- Total Score: -2

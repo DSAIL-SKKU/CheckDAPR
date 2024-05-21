@@ -1,0 +1,42 @@
+Based on the provided images and instructions, here's the DAPR score calculation for the sketch.
+
+Stress Score:
+- S1: No rain - There is rain present, so the score is 0.
+- S2: Rain present - Rain is present, so the score is 1.
+- S3: Excess rain - It's not possible to measure the space occupied by the rain compared to the person, but the rain does not seem to be excessive, so the score is 0.
+- S4: Style of Rain - The rain is depicted as drops only, so the score is 0.
+- S6: Rain touching - Raindrops are clearly touching the person, so the score is 1.
+- S8: Wind - There are no indications of wind present, so the score is 0.
+- S9: Puddles - There is one puddle present, so the score is 1.
+- S10: Standing in puddle - The person is standing in the puddle, so the score is 1.
+- S11: Various rain styles - Rain is only depicted as drops, so the score is 0.
+- S13: Lightning bolts - No lightning present, so the score is 0.
+- S14: Lightning hits - No lightning strikes, so the score is 0.
+- S15: Clouds - No clouds are depicted, so the score is 0.
+- S16: Dark clouds - No dark clouds are depicted, so the score is 0.
+
+Stress score total: 0+1+0+0+1+0+1+1+0+0+0+0+0 = 4
+
+Resource Score:
+- R1: Protection present - No protective gear is present, so the score is 0.
+- R2: Umbrella present - No umbrella is present, so the score is 0.
+- R3: Umbrella held - No umbrella is held, so the score is 0.
+- R5: Adequate size of protection - No protection, therefore the score is 0.
+- R6: Clear protection - Again, no protection, so the score is 0.
+- R11: Whole face - The whole face is visible, so the score is 1.
+- R12: Smile on face - It is not clear whether there is a smile given the style of the drawing, but assuming it's neutral, the score is 0.
+- R13: Centered figure - The person is centered in the sketch, so the score is 1.
+- R14: Size of figure - It is not possible to measure the size, but it appears within the acceptable range, so the score is 1 (assuming the sketch size is standard).
+- R15: Whole figure - The whole figure is depicted from head to toe facing forward, so the score is 1.
+
+Resource score total: 0+0+0+0+0+1+0+1+1+1 = 4
+
+The DAPR score is calculated as follows:
+DAPR score = Resource score - Stress score
+DAPR score = 4 - 4
+DAPR score = 0
+
+Final output:
+- Stress score: S1+S2+S3+S4+S6+S8+S9+S10+S11+S13+S14+S15+S16 = 4
+- Resource score: R1+R2+R3+R5+R6+R11+R12+R13+R14+R15 = 4
+- Dapr Score: 0

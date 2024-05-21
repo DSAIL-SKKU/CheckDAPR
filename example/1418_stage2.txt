@@ -1,0 +1,53 @@
+### Stress Score:
+
+- **Rain Presence:**
+  - S1: No rain (0 if rain is present, 1 if absent) => 0
+  - S2: Rain present (0 if no rain, 1 if rain is present) => 1
+  - S3: Excess rain (space occupied by rain vs. person) => 0 (The rain doesn't appear to be excessively heavy as it’s depicted by simple vertical lines, without dominating the image).
+
+- **Rain Interaction:**
+  - S4: Style of Rain (0 if rain is depicted only as dots, 1 for lines, teardrops) => 1 (The rain is depicted as lines)
+  - S6: Rain touching (0 if no contact, 1 if contact with person/gear) => 1 (The rain lines are touching the person)
+  - S8: Wind (0 if no wind, 1 if wind is present) => 0 (There's no indication of wind)
+
+- **Puddles:**
+  - S9: Puddles (0 if none, 1 for each puddle present) => 2 (There are two puddles)
+  - S10: Standing in puddle(s) (0 if not standing in, 1 for each puddle making contact) => 1 (One puddle is in contact with the person)
+
+- **More Rain Details:**
+  - S11: Various rain style(s) (0 for only dots, 1 for each additional form like lines) => 1 (Rain is depicted as lines)
+
+- **Lightning:**
+  - S13: Lightning bolt(s) (0 if none, 1 for each instance of lightning) => 0 (No lightning drawn)
+  - S14: Lightning hit(s) (0 if no strike, 1 for each strike hitting person/gear) => 0 (No lightning drawn)
+
+- **Clouds:**
+  - S15: Cloud(s) (0 if none, 1 for each cloud) => 0 (No clouds drawn)
+  - S16: Dark Cloud(s) (0 if no dark clouds, 1 for each dark cloud) => 0 (No clouds drawn)
+
+**Stress score:** S1+S2+S3+S4+S6+S8+S9+S10+S11+S13+S14+S15+S16 = 0+1+0+1+1+0+2+1+1+0+0+0+0 = **6**
+
+### Resource Score:
+
+- **Protective Measures:**
+  - R1: Protection present (0 if absent, 1 if present) => 1 (Person is wearing a raincoat)
+  - R2: Umbrella present (0 if no umbrella, 1 if present) => 1 (The umbrella is present)
+  - R3: Umbrella held (0 if holding oddly, 1 if correctly) => 1 (Umbrella is held correctly)
+
+- **Protection Size:**
+  - R5: Adequate size of protection (0 if ≤ person's width, 1 if greater) => 1 (Umbrella appears adequately sized)
+  - R6: Clear protection (0 if damaged, 1 if intact) => 1 (Protection, the raincoat, seems intact)
+
+- **Clothing and Appearance:**
+  - R11: Whole face (0 if face is covered/shown in profile, 1 if full face visible) => 1 (Full face is visible)
+  - R12: Smile on Face (0 if no smile, 1 if there is a smile) => 1 (There is a smile on the face)
+
+- **Person Placement and Size:**
+  - R13: Centered figure (0 if off-center, 1 if centered) => 1 (Figure is centered)
+  - R14: Size of figure (0 if too large/small, 1 if between 2 and 6 inches) => 1 (Assuming the figure is within the size range; cannot confirm without actual measurements)
+  - R15: Whole figure (0 if partial body, 1 if head to toe) => 1 (Person depicted from head to toe)
+
+**Resource score**: R1+R2+R3+R5+R6+R11+R12+R13+R14+R15 = 1+1+1+1+1+1+1+1+1+1 = **10**
+
+### Dapr Score Calculation:
+- **total Score**: Resource score - Stress score = 10 - 6 = **4**

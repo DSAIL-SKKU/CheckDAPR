@@ -1,0 +1,35 @@
+Based on the original sketch and the object detection results, let's calculate the 'DAPR score' using the criteria provided. 
+
+**Stress Score:**
+- S1: No rain (0 if rain is present, 1 if absent): 0 (rain is present)
+- S2: Rain present (0 if no rain, 1 if rain is present): 1 (rain is present)
+- S3: Excess rain (calculate the space occupied by rain compared to the person; positive result indicates heavy rain, scored as 1, else 0): It's subjective to determine "excess" rain without specific space measurements, but considering the density of raindrops around the person, we can ascertain a positive result indicating heavy rain: 1
+- S4: Style of Rain (0 if rain is depicted only as dots, 1 if depicted as other forms like circles, lines, teardrops): 1 (rain is depicted as lines)
+- S6: Rain touching (0 if no contact with the person or their gear, 1 if there is contact): 1 (rain touching the person)
+- S8: Wind (0 if no wind is present, 1 if wind is present): It's not possible to determine the presence of wind from the sketch or detection result, hence: 0
+- S9: Puddles (0 if none, 1 for each puddle present): 0 (no puddles depicted)
+- S10: Standing in puddle(s) (0 if not standing in or no puddles, 1 for each puddle making contact with the person): 0 (no puddles depicted)
+- S11: Various rain style(s) (0 if rain is only dots, 1 for each additional form of rain depicted like lines, circles, teardrops): 1 (different styles of rain)
+- S13: Lightning bolt(s) (0 if none, 1 for each instance of lightning): 0 (no lightning depicted)
+- S14: Lightning hit(s) (0 if no strike, 1 for each strike hitting the person or their gear): 0 (no lightning depicted)
+- S15: Cloud(s) (0 if none, 1 for each cloud): 0 (no clouds depicted)
+- S16: Dark Cloud(s) (0 if no dark clouds, 1 for each dark cloud): 0 (no clouds depicted)
+
+Stress score: S1+S2+S3+S4+S6+S8+S9+S10+S11+S13+S14+S15+S16 = 0+1+1+1+1+0+0+0+1+0+0+0+0 = 5
+
+**Resource Score:**
+- R1: Protection present (0 if absent, 1 if present): 0 (no protection)
+- R2: Umbrella present (0 if no umbrella, 1 if present): 0 (no umbrella)
+- R3: Umbrella held (0 if holding oddly, 1 if correctly): 0 (no umbrella)
+- R5: Adequate size of protection (0 if object width ≤ person's width, 1 if greater): There is no protection to measure, so: 0
+- R6: Clear protection (0 if protection is damaged, 1 if it's intact): No protection present: 0 
+- R11: Whole face (0 if the face is covered by hat, umbrella, or shown in profile, 1 if the full face is visible): 1 (whole face is visible)
+- R12: Smile on Face (0 if no smile or expression on the face, 1 if there is a smile): 0 (no smile or discernible expression)
+- R13: Centered figure (0 if off-center, 1 if centered): 1 (figure is centered)
+- R14: Size of figure (0 if larger than 6 inches or smaller than 2 inches, 1 if between 2 and 6 inches): Without measurements, we must assume the standard paper and sketch sizes would be within this range: 1
+- R15: Whole figure (0 if the person is shown from side, back, as a stick figure, head only or partial body, 1 if depicted from head to toe facing forward): 1 (whole figure is depicted)
+
+Resource score: R1+R2+R3+R5+R6+R11+R12+R13+R14+R15 = 0+0+0+0+0+1+0+1+1+1 = 4
+
+**Dapr Score Calculation:** Subtract the total Stress Score from the total Resource Score.
+Total Score: Resource score - Stress score = 4 - 5 = -1
