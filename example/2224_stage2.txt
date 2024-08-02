@@ -1,0 +1,39 @@
+Based on the analysis of the sketch and object detection results, here's the calculation of the DAPR score:
+
+Stress Score:
+S1: 0 (Rain is present)
+S2: 1 (Rain is present)
+S3: 1 (Rain appears to occupy a significant portion of the image)
+S4: 1 (Rain is depicted as teardrops)
+S6: 1 (Rain appears to be touching the figure)
+S8: 0 (No wind is apparent)
+S9: 1 (One puddle is present)
+S10: 0 (The figure is not standing in the puddle)
+S11: 0 (Rain is only depicted in one style)
+S13: 0 (No lightning)
+S14: 0 (No lightning strikes)
+S15: 2 (Two cloud-like shapes are present)
+S16: 0 (Clouds are not specifically described as dark)
+
+Stress score: 0+1+1+1+1+0+1+0+0+0+0+2+0 = 7
+
+Resource Score:
+R1: 0 (No protective measures against rain)
+R2: 0 (No umbrella)
+R3: 0 (No umbrella held)
+R5: 0 (No protection present)
+R6: 0 (No protection present)
+R11: 1 (The full face appears to be visible)
+R12: 1 (The figure appears to be smiling)
+R13: 1 (The figure is centered in the image)
+R14: 1 (Assuming the figure is of appropriate size, though this cannot be definitively determined from the information given)
+R15: 1 (The figure appears to be depicted from head to toe facing forward)
+
+Resource score: 0+0+0+0+0+1+1+1+1+1 = 5
+
+DAPR Score Calculation:
+Total Score: Resource Score - Stress Score = 5 - 7 = -2
+
+- Stress score: 7
+- Resource score: 5
+- Total Score: -2

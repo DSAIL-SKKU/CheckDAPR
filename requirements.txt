@@ -1,0 +1,4 @@
+Pillow
+matplotlib
+ultralytics
+anthropic

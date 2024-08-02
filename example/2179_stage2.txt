@@ -1,0 +1,39 @@
+Based on the analysis and the guidelines provided, here's the calculation of the DAPR score:
+
+Stress Score:
+S1: 0 (Rain is present)
+S2: 1 (Rain is present)
+S3: 0 (Rain doesn't appear to occupy more space than the person)
+S4: 0 (Rain is depicted as dots)
+S6: 1 (Rain appears to be in contact with the person)
+S8: 0 (No wind is evident)
+S9: 0 (No puddles)
+S10: 0 (No puddles)
+S11: 0 (Rain is only dots)
+S13: 0 (No lightning)
+S14: 0 (No lightning strikes)
+S15: 0 (No clouds)
+S16: 0 (No dark clouds)
+
+Stress score: 0+1+0+0+1+0+0+0+0+0+0+0+0 = 2
+
+Resource Score:
+R1: 0 (No protection present)
+R2: 0 (No umbrella)
+R3: 0 (No umbrella held)
+R5: 0 (No protection)
+R6: 0 (No protection)
+R11: 0 (Face is a simple circle, not detailed)
+R12: 0 (No smile or expression visible)
+R13: 1 (Figure appears centered)
+R14: 1 (Assuming the figure is between 2-6 inches, as it's a typical sketch size)
+R15: 0 (Depicted as a stick figure)
+
+Resource score: 0+0+0+0+0+0+0+1+1+0 = 2
+
+Total DAPR Score: Resource Score - Stress Score = 2 - 2 = 0
+
+Output format:
+- Stress score: 2
+- Resource score: 2
+- Total Score: 0

@@ -1,0 +1,33 @@
+Based on the analysis provided, I'll calculate the DAPR score as requested:
+
+Stress Score:
+S1: 0 (rain is present)
+S2: 1 (rain is present)
+S3: 1 (rain appears to occupy a large portion of the image)
+S4: 1 (rain is depicted as lines)
+S6: 1 (rain appears to be in contact with the person)
+S8: 0 (no wind is evident)
+S9: 0 (no puddles mentioned)
+S10: 0 (no puddles mentioned)
+S11: 0 (rain is only depicted as lines)
+S13: 0 (no lightning present)
+S14: 0 (no lightning present)
+S15: 3 (three clouds are present)
+S16: 0 (no mention of dark clouds)
+
+Resource Score:
+R1: 1 (protection present - raincoat mentioned)
+R2: 1 (umbrella present)
+R3: 0 (umbrella not held, lying on the ground)
+R5: 0 (no information about size of protection)
+R6: 1 (no mention of damaged protection)
+R11: 1 (face appears to be visible)
+R12: 0 (no mention of smile or expression)
+R13: 1 (figure described as in the center)
+R14: 0 (no information about size of figure)
+R15: 0 (described as a stick figure)
+
+Calculation:
+- Stress score: 0+1+1+1+1+0+0+0+0+0+0+3+0 = 7
+- Resource score: 1+1+0+0+1+1+0+1+0+0 = 5
+- Total Score: 5 - 7 = -2
