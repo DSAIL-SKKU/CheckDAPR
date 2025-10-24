@@ -1,6 +1,9 @@
-# CheckDAPR: An MLLM-based DAPR Scoring System for Art Therapy
+# CheckDAPR: An MLLM-based Sketch Analysis System for Art Therapy
 
-**CheckDAPR** is a novel DAPR assessment system, which can automatically analyze the drawing test, Draw-A-Person-in-the-Rain (DAPR), a psychological drawing assessment used for identifying stressful experiences and coping behavior. This system use Multimodal Large Language Model(MLLM) to refine object detection results and corrects inaccuracies in sketches by evaluating existing models, and its MLLM also produces a DAPR assessment report that calculates detailed scores.
+**CheckDAPR** is a novel DAPR assessment system, which can automatically analyze the drawing test, Draw-A-Person-in-the-Rain (DAPR), a psychological drawing assessment used for identifying stressful experiences and coping behavior. This system uses a Multimodal Large Language Model(MLLM) to refine object detection results and correct inaccuracies in sketches by evaluating existing models, and its MLLM also produces a DAPR assessment report that calculates detailed scores.
+
+## News 
+This is the official implementation of CheckDAPR accepted in the 34th ACM International Conference on Information and Knowledge Management (CIKM 2025)! 🎉
 
 ## Get Started
 
